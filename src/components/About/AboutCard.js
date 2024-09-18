@@ -12,7 +12,7 @@ function AboutCard() {
             <span className="purple">Muhammad Huzefa Abbasi </span>
             from <span className="purple">Lahore, Pakistan</span>.
             <br />
-            I am currently a mobile development intern at QwertyExperts.
+            I am a mobile developer and a passionate learner.
             <br />
             I am a final year BS Software Engineering student.
             <br />
