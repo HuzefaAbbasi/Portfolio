@@ -8,6 +8,8 @@ import pos from "../../Assets/Projects/pos.png";
 import furn from "../../Assets/Projects/furn.png";
 import expense from "../../Assets/Projects/expense-tracker.png";
 import carpool from "../../Assets/Projects/car-pool.png";
+import smart_invest from "../../Assets/Projects/smart-invest.png"
+import fee_management from "../../Assets/Projects/fee-management.png"
 
 function Projects() {
   return (
@@ -23,10 +25,40 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={smart_invest}
+              title="Smart Invest"
+              description="Worked in a team of four to develop a versatile mobile wallet for seamless transactions, subscriptions, real-time currency conversion, and financial insights. Built with React Native, TypeScript, Node.js and MongoDB for an efficient user experience."
+              ghLink="https://github.com/HuzefaAbbasi/smartInvest"
+              // demoLink="https://blogs.soumya-jit.tech/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={carpool}
               title="Car Pool"
               description="Developed a carpool application in React Native Expo with authentication, ride booking, ride creation, and chat features. Integrated APIs for seamless functionality."
               ghLink="https://github.com/HuzefaAbbasi/car-pool"
+              // demoLink="https://blogs.soumya-jit.tech/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={inlfuencer}
+              isGitlab={true}
+              title="Influencer Advertiser System"
+              description="Developed the backend for a platform connecting influencers and advertisers, implementing authentication, profile management, gig interactions, and order placement. Optimized the database schema for efficiency and scalability using Node.js, Express, and MongoDB."
+              ghLink="https://gitlab.com/umair.zafar/influencer-advertisor-platform-server"
+              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={fee_management}
+              title="Fee Management System"
+              description="Worked in team of two to develop a solution using MERN stack for a college to manage student fees, generate financial reports, print challans, and handle user access efficiently."
+              // ghLink="https://github.com/HuzefaAbbasi/car-pool"
               // demoLink="https://blogs.soumya-jit.tech/"
             />
           </Col>
@@ -78,16 +110,6 @@ retrieval. "
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={inlfuencer}
-              isGitlab={true}
-              title="Influencer Advertiser System"
-              description="Developed the backend for a platform connecting influencers and advertisers, implementing authentication, profile management, gig interactions, and order placement. Optimized the database schema for efficiency and scalability using Node.js, Express, and MongoDB."
-              ghLink="https://gitlab.com/umair.zafar/influencer-advertisor-platform-server"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
         </Row>
       </Container>
     </Container>

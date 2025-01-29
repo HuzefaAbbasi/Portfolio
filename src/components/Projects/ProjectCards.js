@@ -14,9 +14,11 @@ function ProjectCards(props) {
         <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
+        {props.title !== "Fee Management System" && (
+          <Button variant="primary" href={props.ghLink} target="_blank">
           {props.isGitlab ? <SiGitlab /> : <BsGithub />} &nbsp; Code
-        </Button>
+        </Button>)}
+        
         {"\n"}
         {"\n"}
 
