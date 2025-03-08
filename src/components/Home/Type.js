@@ -8,7 +8,6 @@ function Type() {
         strings: [
           "Software Developer",
           "Mobile App Developer",
-          "Node Js Developer",
           "Web Developer",
         ],
         autoStart: true,
