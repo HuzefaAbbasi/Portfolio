@@ -1,0 +1,32 @@
+name: Run Katalon Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Katalon Studio
+        run: |
+          wget https://download.katalon.com/9.0.0/Katalon_Studio_Engine_Linux_64-9.0.0.tar.gz
+          mkdir katalon
+          tar -xvzf Katalon_Studio_Engine_Linux_64-9.0.0.tar.gz -C katalon --strip-components=1
+
+      - name: Run Katalon Tests
+        run: |
+          ./katalon/katalonc \
+            -noSplash \
+            -runMode=console \
+            -projectPath=$(pwd) \
+            -retry=0 \
+            -testSuitePath="Test Suites/Project" \
+            -executionProfile="default" \
+            -browserType="Chrome"
